@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StudySphere helps college students organize classes, assignments, and focused study time.">
+  <title>StudySphere | Study With Direction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navigation" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="StudySphere home">Study<span>Sphere</span></a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#submit">Submit text</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#start">Get started <span aria-hidden="true">&#8599;</span></a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Your semester, in focus</p>
+        <h1 id="hero-title">Make room for <em>what matters.</em></h1>
+        <p class="hero-description">StudySphere brings your courses, due dates, and dedicated study time into one calm, clear plan.</p>
+        <div class="hero-actions" id="start">
+          <a class="button button-primary" href="#submit">Build your plan <span aria-hidden="true">&#8594;</span></a>
+          <a class="text-link" href="#how-it-works">See how it works</a>
+        </div>
+        <div class="hero-proof" aria-label="StudySphere benefits">
+          <div><strong>3x</strong><span>clearer weeks</span></div>
+          <div><strong>1</strong><span>organized place</span></div>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Student studying at a desk">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" alt="Student writing notes while studying at a desk">
+        <div class="schedule-card">
+          <p>Today, Sep 9</p>
+          <div class="schedule-item"><span class="dot coral"></span><span>Psychology notes</span><time>2:30</time></div>
+          <div class="schedule-item"><span class="dot teal"></span><span>Calculus practice</span><time>5:00</time></div>
+          <div class="schedule-progress"><span></span></div>
+          <small>2 of 3 sessions complete</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="features" aria-labelledby="features-title">
+      <div class="section-intro">
+        <p class="eyebrow">Built for real semesters</p>
+        <h2 id="features-title">Small tools. A steadier rhythm.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon calendar" aria-hidden="true">&#128197;</div>
+          <h3>One academic view</h3>
+          <p>See class work, deadlines, and study blocks together without switching between apps.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon target" aria-hidden="true">&#9678;</div>
+          <h3>Priorities made clear</h3>
+          <p>Give every assignment a place, a due date, and the attention it deserves.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon chart" aria-hidden="true">&#8599;</div>
+          <h3>Progress you can feel</h3>
+          <p>Mark sessions complete and watch your momentum build one focused hour at a time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="workflow" id="how-it-works" aria-labelledby="workflow-title">
+      <div>
+        <p class="eyebrow">A simple starting point</p>
+        <h2 id="workflow-title">Plan the week. Protect your time.</h2>
+      </div>
+      <ol class="steps">
+        <li><span>01</span><div><h3>Add your courses</h3><p>Start with the classes and commitments already on your calendar.</p></div></li>
+        <li><span>02</span><div><h3>Map each deadline</h3><p>Break assignments into realistic work sessions before they become urgent.</p></div></li>
+        <li><span>03</span><div><h3>Show up focused</h3><p>Follow a clear plan, track what is finished, and adjust as life changes.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="submission-section" id="submit" aria-labelledby="submission-title">
+      <div class="submission-intro">
+        <p class="eyebrow">Start with one thought</p>
+        <h2 id="submission-title">Put your next priority somewhere you can see it.</h2>
+        <p>Write down a course, assignment, deadline, or study goal. StudySphere will keep it here while you shape your plan.</p>
+      </div>
+      <form class="submission-form" id="submission-form">
+        <label for="study-text">What do you need to remember?</label>
+        <textarea id="study-text" name="studyText" rows="5" maxlength="500" placeholder="e.g. Finish the biology lab report by Friday" required></textarea>
+        <div class="submission-form-footer">
+          <span class="character-count" id="character-count">0 / 500</span>
+          <button class="button button-primary" type="submit">Submit priority <span aria-hidden="true">&#8594;</span></button>
+        </div>
+        <p class="submission-status" id="submission-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-top">
+      <a class="brand" href="#top">Study<span>Sphere</span></a>
+      <p>A more intentional way to move through your semester.</p>
+      <a class="button button-light" href="mailto:hello@studysphere.example">Contact us <span aria-hidden="true">&#8594;</span></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 StudySphere</p>
+      <div class="footer-links">
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    const submissionForm = document.querySelector('#submission-form');
+    const studyText = document.querySelector('#study-text');
+    const characterCount = document.querySelector('#character-count');
+    const submissionStatus = document.querySelector('#submission-status');
+
+    studyText.addEventListener('input', () => {
+      characterCount.textContent = `${studyText.value.length} / 500`;
+    });
+
+    submissionForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const text = studyText.value.trim();
+
+      if (!text) {
+        submissionStatus.textContent = 'Write a priority before submitting.';
+        submissionStatus.className = 'submission-status error';
+        studyText.focus();
+        return;
+      }
+
+      const submissions = JSON.parse(localStorage.getItem('studysphere-submissions') || '[]');
+      submissions.push({ text, submittedAt: new Date().toISOString() });
+      localStorage.setItem('studysphere-submissions', JSON.stringify(submissions));
+      submissionStatus.textContent = 'Priority saved. You can come back to it whenever you are ready.';
+      submissionStatus.className = 'submission-status success';
+      submissionForm.reset();
+      characterCount.textContent = '0 / 500';
+    });
+  </script>
+</body>
+</html>
