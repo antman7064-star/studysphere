@@ -20,6 +20,9 @@
         <a href="#submit">Submit text</a>
         <a href="#contact">Contact</a>
       </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Dark mode" title="Use dark color theme">
+        <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
+      </button>
       <a class="nav-cta" href="#start">Get started <span aria-hidden="true">&#8599;</span></a>
     </nav>
   </header>
@@ -121,7 +124,47 @@
       </div>
     </div>
   </footer>
+  <a class="back-to-top" id="back-to-top" href="#top" aria-label="Back to top" title="Back to top">
+    <span aria-hidden="true">&#8593;</span>
+  </a>
   <script>
+    const siteHeader = document.querySelector('.site-header');
+    const hero = document.querySelector('.hero');
+    const themeToggle = document.querySelector('#theme-toggle');
+    const themeToggleIcon = themeToggle.querySelector('.theme-toggle-icon');
+    const backToTop = document.querySelector('#back-to-top');
+    const colorScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('studysphere-theme');
+
+    function applyTheme(isDark) {
+      document.documentElement.dataset.theme = isDark ? 'dark' : 'light';
+      themeToggle.setAttribute('aria-checked', String(isDark));
+      themeToggle.title = isDark ? 'Use light color theme' : 'Use dark color theme';
+      themeToggleIcon.innerHTML = isDark ? '&#9788;' : '&#9790;';
+    }
+
+    applyTheme(savedTheme ? savedTheme === 'dark' : colorScheme.matches);
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.dataset.theme !== 'dark';
+      localStorage.setItem('studysphere-theme', isDark ? 'dark' : 'light');
+      applyTheme(isDark);
+    });
+
+    colorScheme.addEventListener('change', (event) => {
+      if (!localStorage.getItem('studysphere-theme')) applyTheme(event.matches);
+    });
+
+    function updateScrollControls() {
+      const pastHero = window.scrollY > hero.offsetTop + hero.offsetHeight - window.innerHeight * 0.25;
+      siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+      backToTop.classList.toggle('is-visible', pastHero);
+    }
+
+    window.addEventListener('scroll', updateScrollControls, { passive: true });
+    window.addEventListener('resize', updateScrollControls);
+    updateScrollControls();
+
     const submissionForm = document.querySelector('#submission-form');
     const studyText = document.querySelector('#study-text');
     const characterCount = document.querySelector('#character-count');
