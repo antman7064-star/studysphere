@@ -1,0 +1,21 @@
+STUDYSPHERE
+
+Project Statement
+StudySphere is a campus-focused study planning platform that helps college students turn busy academic schedules into practical daily plans. It gives students one organized place to record courses, assignments, study sessions, and deadlines. The goal is to make academic work easier to see, prioritize, and complete before important due dates arrive.
+
+Target Audience
+The primary users are college students balancing several courses, assignments, work shifts, and extracurricular responsibilities.
+
+Core Features
+- User authentication for private accounts and secure schedule storage.
+- Profile creation for academic information, courses, and study goals.
+- Assignment and deadline tracking with due dates, priorities, and completion status.
+- Study-session scheduling for focused time blocks.
+- Progress tracking for completed work and upcoming priorities.
+- Text submission for quickly recording a course, assignment, deadline, or study goal.
+
+Text Submission Flow
+Users can select "Submit text" from the desktop navigation, enter a priority in the text field, and submit it. The page validates the entry, displays a confirmation message, and stores the submitted text locally in the browser.
+
+Purpose
+StudySphere reduces the stress caused by scattered notes and last-minute work by helping students plan steadily, protect focused study time, and keep their academic workload visible.
