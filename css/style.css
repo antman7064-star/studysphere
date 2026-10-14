@@ -1,0 +1,84 @@
+/* 1. UNIVERSAL RESET 
+   This clears default browser margins and pads everything predictably */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. BODY DESIGN 
+   Sets up a clean background color and fonts for the whole screen */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8; /* Soft blue-gray background */
+    color: #333333;             /* Dark grey text for easy reading */
+    display: flex;
+    justify-content: center;    /* Horizontally centers the card */
+    align-items: center;        /* Vertically centers the card */
+    min-height: 100vh;          /* Forces screen to be full desktop height */
+}
+
+/* 3. PROFILE CARD 
+   The white decorative box framing our content */
+.profile-card {
+    background-color: #ffffff; /* Crisp white background */
+    padding: 40px;
+    border-radius: 12px;       /* Smoothly rounds the box corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Adds a subtle drop shadow */
+    max-width: 400px;          /* Prevents card from stretching too wide */
+    width: 90%;                /* Allows card to shrink gracefully on phones */
+    text-align: center;        /* Centers all text internal to this card */
+}
+
+/* 4. IMAGES AND TEXT FORMATTING */
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;         /* Keeps the picture from looking squished */
+    border-radius: 50%;        /* Crops your square photo into a perfect circle */
+    border: 4px solid #0070f3; /* Bright blue decorative frame around photo */
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #111111;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #0070f3;            /* Matches our primary brand blue theme color */
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase; /* Converts subtitle text to UPPERCASE automatically */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666666;            /* Lighter gray for paragraph text variance */
+    margin-bottom: 30px;
+}
+
+/* 5. LINK / CTA BUTTON */
+.cta-button {
+    display: inline-block;
+    background-color: #0070f3; /* Solid blue button background */
+    color: #ffffff;            /* White link text */
+    text-decoration: none;     /* Removes standard blue link underline */
+    padding: 12px 24px;
+    border-radius: 6px;        /* Round edges for our link block */
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s ease; /* Smooth hover transition */
+}
+
+/* Changes the color smoothly when your mouse hovers over it */
+.cta-button:hover {
+    background-color: #0051b3; /* Slightly darker blue on hover */
+}
