@@ -11,10 +11,13 @@
   "author": "Student Name",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "sql.js": "^1.8.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
+  },
+  "allowScripts": {
+    "sqlite3@5.1.7": true
   }
 }
-

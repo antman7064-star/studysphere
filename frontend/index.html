@@ -6,6 +6,7 @@
     <title>About Me - Profile Page</title>
     <!-- Linking our external styling sheet -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/task-tracker.css">
 </head>
 <body>
  
@@ -38,10 +39,34 @@
         
     </div>
 
-       
+    <!-- Task Tracker Section -->
+    <div class="task-tracker-container">
+        <div class="task-tracker">
+            <h2>Task Tracker</h2>
+            
+            <!-- Add Task Form -->
+            <div class="task-input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Add a new task..."
+                    aria-label="New task title"
+                >
+                <button id="addTaskBtn" class="add-task-btn">Add Task</button>
+            </div>
+
+            <!-- Task List -->
+            <ul id="taskList" class="task-list"></ul>
+
+            <!-- Empty State Message -->
+            <p id="emptyMessage" class="empty-message">No tasks yet. Add one to get started!</p>
+        </div>
+    </div>
 
     <!-- Linka external JavaScript file -->
     <script src="js/script.js"></script>
+    <script src="js/task-tracker.js"></script>
 
 </body>
 </html>
